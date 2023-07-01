@@ -1,19 +1,19 @@
 package com.example.task2
 
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.Fragment
+import android.view.View
 import androidx.navigation.fragment.findNavController
-import com.example.task2.databinding.FragmentToiletBinding
+import com.example.task2.databinding.FragmentHallBinding
 
-class ToiletFragment : Fragment(R.layout.fragment_toilet) {
-    private var binding: FragmentToiletBinding? = null
+class HallFragment : Fragment(R.layout.fragment_hall) {
+    private var binding: FragmentHallBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = FragmentToiletBinding.bind(view)
+        binding = FragmentHallBinding.bind(view)
         binding?.endButton?.setOnClickListener {
-            val bundle = MainActivity.getBundle("уборной")
-            findNavController().navigate(R.id.action_toiletFragment_to_resultFragment, bundle)
+            val bundle = MainActivity.getBundle("гостинной")
+            findNavController().navigate(R.id.action_hallFragment_to_resultFragment, bundle)
         }
     }
 

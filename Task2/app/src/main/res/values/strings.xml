@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Task2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="corridor">Corridor</string>
+    <string name="hall">Hall</string>
+    <string name="toilet">Toilet</string>
+    <string name="bathroom">BathRoom</string>
+    <string name="bedroom">BedRoom</string>
+    <string name="kitchen">Kitchen</string>
+    <string name="уборная">Уборная</string>
+    <string name="закончить">Закончить</string>
+    <string name="закончили_осмотр_на">Закончили осмотр на</string>
+    <string name="ванная">Ваннная</string>
+    <string name="спальня">Спальня</string>
+    <string name="коридор">Коридор</string>
+    <string name="гостинная">Гостинная</string>
+    <string name="кухня">Кухня</string>
 </resources>

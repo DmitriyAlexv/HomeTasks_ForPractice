@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bathRoomFragment"
+        android:icon="@drawable/baseline_bathroom_24"
+        android:title="@string/bathroom" />
+    <item
+        android:id="@+id/bedRoomFragment"
+        android:icon="@drawable/baseline_king_bed_24"
+        android:title="@string/bedroom" />
+    <item
+        android:id="@+id/kitchenFragment"
+        android:icon="@drawable/baseline_kitchen_24"
+        android:title="@string/kitchen" />
+    <item
+        android:id="@+id/hallFragment"
+        android:icon="@drawable/baseline_tv_24"
+        android:title="@string/hall" />
+    <item
+        android:id="@+id/toiletFragment"
+        android:icon="@drawable/baseline_newspaper_24"
+        android:title="@string/toilet" />
+</menu>
