@@ -7,12 +7,175 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/tvName"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:text="Имя"
+        android:textAlignment="textStart"
+        android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHeight"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Рост"
+        android:textAlignment="textStart"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvName" />
+
+    <TextView
+        android:id="@+id/tvWeight"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Вес"
+        android:textAlignment="textStart"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvHeight" />
+
+    <TextView
+        android:id="@+id/tvAge"
+        android:layout_width="100dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Возраст"
+        android:textAlignment="textStart"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvWeight" />
+
+    <TextView
+        android:id="@+id/tvBodyIndex"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:text="Индекс тела"
+        android:textAlignment="textStart"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvAge" />
+
+    <TextView
+        android:id="@+id/tvBodyIndexResult"
+        android:layout_width="140dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:text="0.00"
+        android:textAlignment="textStart"
+        android:textSize="24dp"
+        app:layout_constraintStart_toEndOf="@id/tvBodyIndex"
+        app:layout_constraintTop_toTopOf="@id/tvAge" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilName"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="100dp"
+        android:textSize="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="50"
+        app:counterOverflowTextColor="@color/design_default_color_error"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Имя"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilHeight"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:textSize="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="3"
+        app:counterOverflowTextColor="@color/design_default_color_error"
+        app:layout_constraintStart_toEndOf="@id/tvHeight"
+        app:layout_constraintTop_toTopOf="@id/tilName">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etHeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Рост: 1 - 250(см)"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilWeight"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:textSize="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="3"
+        app:counterOverflowTextColor="@color/design_default_color_error"
+        app:layout_constraintStart_toEndOf="@id/tvWeight"
+        app:layout_constraintTop_toTopOf="@id/tilHeight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etWeight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Вес: 1 - 250(кг)"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilAge"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:textSize="20dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="3"
+        app:counterOverflowTextColor="@color/design_default_color_error"
+        app:layout_constraintStart_toEndOf="@id/tvAge"
+        app:layout_constraintTop_toTopOf="@id/tilWeight">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etAge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Возраст: 1 - 150(лет)"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/bCalculate"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="Рассчитать"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvBodyIndex" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
