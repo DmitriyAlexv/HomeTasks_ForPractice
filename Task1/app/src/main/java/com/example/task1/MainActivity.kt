@@ -35,44 +35,54 @@ class MainActivity : AppCompatActivity() {
         }
 
         button.setOnClickListener() {
-            when {
-                name.text.isEmpty() || name.text.length > 50 -> {
-                    findViewById<TextInputLayout>(R.id.tilName).error = "ERROR"
-                    return@setOnClickListener
-                }
+            if (isValidInput(name, height, weight, age)) {
+                val result = calculateBodyIndex(
 
-                height.text.isEmpty() || height.text.toString()
-                    .toInt() > 250 || height.text.toString().toInt() <= 0 -> {
-                    findViewById<TextInputLayout>(R.id.tilHeight).error = "ERROR"
-                    return@setOnClickListener
-                }
-
-                weight.text.isEmpty() || weight.text.toString()
-                    .toInt() > 250 || weight.text.toString().toInt() <= 0 -> {
-                    findViewById<TextInputLayout>(R.id.tilWeight).error = "ERROR"
-                    return@setOnClickListener
-                }
-
-                age.text.isEmpty() || age.text.toString().toInt() > 150 || age.text.toString()
-                    .toInt() <= 0 -> {
-                    findViewById<TextInputLayout>(R.id.tilAge).error = "ERROR"
-                    return@setOnClickListener
-                }
-
-                else -> {
-                    val result = calculateBodyIndex(
-                        name.text.toString(),
-                        height.text.toString().toInt(),
-                        weight.text.toString().toInt(),
-                        age.text.toString().toInt()
-                    )
-                    findViewById<TextView>(R.id.tvBodyIndexResult).text = "$result"
-                }
+                    name.text.toString(),
+                    height.text.toString().toInt(),
+                    weight.text.toString().toInt(),
+                    age.text.toString().toInt()
+                )
+                findViewById<TextView>(R.id.tvBodyIndexResult).text = "$result"
             }
         }
     }
 
     private fun calculateBodyIndex(name: String, height: Int, weight: Int, age: Int): Double {
         return floor(weight.toDouble() / (height / 100.0 * height / 100.0) * (age / name.length) * 100.0) / 100.0
+    }
+
+    private fun isValidInput(
+        name: EditText,
+        height: EditText,
+        weight: EditText,
+        age: EditText
+    ): Boolean {
+        when {
+            name.text.isEmpty() || name.text.length > 50 -> {
+                findViewById<TextInputLayout>(R.id.tilName).error = "ERROR"
+                return false
+            }
+
+            height.text.isEmpty() || height.text.toString()
+                .toInt() > 250 || height.text.toString().toInt() <= 0 -> {
+                findViewById<TextInputLayout>(R.id.tilHeight).error = "ERROR"
+                return false
+            }
+
+            weight.text.isEmpty() || weight.text.toString()
+                .toInt() > 250 || weight.text.toString().toInt() <= 0 -> {
+                findViewById<TextInputLayout>(R.id.tilWeight).error = "ERROR"
+                return false
+            }
+
+            age.text.isEmpty() || age.text.toString().toInt() > 150 || age.text.toString()
+                .toInt() <= 0 -> {
+                findViewById<TextInputLayout>(R.id.tilAge).error = "ERROR"
+                return false
+            }
+
+            else -> return true
+        }
     }
 }
