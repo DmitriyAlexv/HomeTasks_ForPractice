@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/corridorFragment">
+
+    <fragment
+        android:id="@+id/hallFragment"
+        android:name="com.example.task2.HallFragment"
+        android:label="fragment_hall"
+        tools:layout="@layout/fragment_hall">
+        <action
+            android:id="@+id/action_hallFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bathRoomFragment"
+        android:name="com.example.task2.BathRoomFragment"
+        android:label="fragment_bath_room"
+        tools:layout="@layout/fragment_bath_room">
+        <action
+            android:id="@+id/action_bathRoomFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kitchenFragment"
+        android:name="com.example.task2.KitchenFragment"
+        android:label="fragment_kitchen"
+        tools:layout="@layout/fragment_kitchen">
+        <action
+            android:id="@+id/action_kitchenFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bedRoomFragment"
+        android:name="com.example.task2.BedRoomFragment"
+        android:label="fragment_bed_room"
+        tools:layout="@layout/fragment_bed_room">
+        <action
+            android:id="@+id/action_bedRoomFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toiletFragment"
+        android:name="com.example.task2.ToiletFragment"
+        android:label="fragment_toilet"
+        tools:layout="@layout/fragment_toilet">
+        <action
+            android:id="@+id/action_toiletFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/corridorFragment"
+        android:name="com.example.task2.CorridorFragment"
+        android:label="fragment_corridor"
+        tools:layout="@layout/fragment_corridor">
+        <action
+            android:id="@+id/action_corridorFragment_to_kitchenFragment"
+            app:destination="@id/kitchenFragment" />
+        <action
+            android:id="@+id/action_corridorFragment_to_hallFragment"
+            app:destination="@id/hallFragment" />
+        <action
+            android:id="@+id/action_corridorFragment_to_bathRoomFragment"
+            app:destination="@id/bathRoomFragment" />
+        <action
+            android:id="@+id/action_corridorFragment_to_bedRoomFragment"
+            app:destination="@id/bedRoomFragment" />
+        <action
+            android:id="@+id/action_corridorFragment_to_toiletFragment"
+            app:destination="@id/toiletFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.task2.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" />
+</navigation>
