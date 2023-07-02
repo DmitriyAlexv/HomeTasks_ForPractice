@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Task3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="metals_specification">Metals specification</string>
+    <string name="copper">Copper</string>
+    <string name="metal">Metal</string>
+    <string name="hardness">Hardness</string>
+    <string name="description">Description</string>
+    <string name="number">Number</string>
 </resources>
