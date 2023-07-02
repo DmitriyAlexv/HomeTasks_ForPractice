@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/listOfMetalsFragment">
+
+    <fragment
+        android:id="@+id/listOfMetalsFragment"
+        android:name="com.example.task3.ListOfMetalsFragment"
+        android:label="fragment_list_of_metals"
+        tools:layout="@layout/fragment_list_of_metals">
+        <action
+            android:id="@+id/action_listOfMetalsFragment_to_propertyFragment"
+            app:destination="@id/propertyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/propertyFragment"
+        android:name="com.example.task3.PropertyFragment"
+        android:label="fragment_property"
+        tools:layout="@layout/fragment_property" />
+</navigation>
