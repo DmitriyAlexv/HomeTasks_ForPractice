@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Task1</string>
+    <string name="имя">Имя</string>
+    <string name="рост">Рост</string>
+    <string name="вес">Вес</string>
+    <string name="возраст">Возраст</string>
+    <string name="индекс_тела">Индекс тела</string>
+    <string name="default_value">0.00</string>
+    <string name="условие_роста">Рост: 1 - 250(см)</string>
+    <string name="условие_веса">Вес: 1 - 250(кг)</string>
+    <string name="условие_возраста">Возраст: 1 - 150(лет)</string>
+    <string name="рассчитать">Рассчитать</string>
+</resources>
